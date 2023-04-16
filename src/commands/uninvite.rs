@@ -6,7 +6,7 @@ pub fn register (command: &mut builder::CreateApplicationCommand) -> &mut builde
 {
     command
         .name("uninvite")
-        .description("Uninvite the current character from this channel")
+        .description("Uninvite the current bot from this channel")
 }
 
 pub fn run (command: &ApplicationCommandInteraction, manager: &BotManager, msg: &mut CreateInteractionResponseData){
@@ -17,8 +17,8 @@ pub fn run (command: &ApplicationCommandInteraction, manager: &BotManager, msg: 
     match selected_character {
         Some(_) => {
             data.invited_characters.remove(&command.channel_id);
-            msg.content("Character uninvited!");
+            msg.content("Bot uninvited!");
         }
-        None => {msg.content("There is no active character in this channel!");}
+        None => {msg.content("There is no active bot in this channel!");}
     };
 }

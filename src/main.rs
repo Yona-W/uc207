@@ -32,6 +32,7 @@ async fn main() {
             GatewayIntents::DIRECT_MESSAGES |
             GatewayIntents::GUILD_MEMBERS |
             GatewayIntents::GUILD_MESSAGES |
+            GatewayIntents::GUILD_WEBHOOKS |
             GatewayIntents::GUILDS
         )
         .event_handler(botmanager::BotManager

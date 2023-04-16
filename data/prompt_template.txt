@@ -1,0 +1,13 @@
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+### Instruction:
+[[PERSONA]]
+
+Here is an example of a conversation thay had:
+
+[[EXAMPLE]]
+
+Write [[NAME]]'s next response in this chat conversation.
+### Input:
+[[CONTEXT]]
+### Response:
+[[NAME]]:

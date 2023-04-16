@@ -6,7 +6,7 @@ pub fn register (command: &mut builder::CreateApplicationCommand) -> &mut builde
 {
     command
         .name("list")
-        .description("List registered characters")
+        .description("List registered bots")
         .create_option(|option| {
             option
                 .name("page")
@@ -31,8 +31,8 @@ pub fn run (command: &ApplicationCommandInteraction, manager: &BotManager, msg: 
     };
 
     msg.embed(|e| { e
-        .title("Character List")
-        .description("Use `/invite` to invite one of these characters to the current channel!");
+        .title("Bot profile List")
+        .description("Use `/invite` to invite one of these bots to the current channel!");
         let mut index = 0;
         let mut added = 0;
         for (id, character) in &data.characters {

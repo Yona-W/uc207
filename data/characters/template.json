@@ -1,0 +1,10 @@
+{
+    "char_name": "Name",
+    "char_description": "Description (Only displayed in the UI, doesn't do anything)",
+    "char_persona": "Description that gets fed to the LLM as context to generate the dialog",
+    "avatar_url": "Profile pic (URL)",
+    "example_dialogue":[
+        {"speaker":"Speaker", "content":"Hi, how are you?"},
+        {"speaker":"Name", "content":"Good, thank you!"}
+    ]
+}

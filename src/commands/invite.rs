@@ -6,11 +6,11 @@ pub fn register (command: &mut builder::CreateApplicationCommand) -> &mut builde
 {
     command
         .name("invite")
-        .description("Invite a character to this channel")
+        .description("Invite a bot to this channel")
         .create_option(|option| {
             option
                 .name("id")
-                .description("The character's ID")
+                .description("The bot's ID")
                 .kind(CommandOptionType::String)
                 .required(true)
         })
@@ -25,12 +25,12 @@ pub fn run (command: &ApplicationCommandInteraction, manager: &BotManager, msg: 
                 id_str as &str
             }
             else{
-                msg.content("Expected character ID!");
+                msg.content("Expected bot ID!");
                 return;
             }
         }
         None => {
-            msg.content("Expected character ID!");
+            msg.content("Expected bot ID!");
             return;
         }
     };
@@ -42,11 +42,11 @@ pub fn run (command: &ApplicationCommandInteraction, manager: &BotManager, msg: 
         Some(char) => {
             do_insert = true;
             msg.embed(|e| { e
-                .title("Character invited!")
+                .title("Bot invited!")
                 .description([&char.char_name, " will now respond in this channel!"].join(""))
                 .image(&char.avatar_url)
         });}
-        None => {msg.content("The selected character ID doesn't exist!");}
+        None => {msg.content("The selected bot ID doesn't exist!");}
 
     };
     if do_insert {
