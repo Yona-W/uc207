@@ -15,7 +15,7 @@
         },
         "args": [],
         "env": {
-            "DISCORD_TOKEN": "MTA5NTUyMjYxMTY5MTI3NDI4MA.GY1ArU.Xxi6nZuIhDbUYHgEglPQhDbMMTQtFb_-xI4HUs"
+            //"DISCORD_TOKEN": "token_here"
         },
         "cwd": "${workspaceFolder}/data/"
     }
